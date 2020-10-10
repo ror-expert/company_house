@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comply Advantage Peps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Person name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comply_advantage_peps.each do |comply_advantage_pep| %>
+      <tr>
+        <td><%= comply_advantage_pep.company_id %></td>
+        <td><%= comply_advantage_pep.person_name %></td>
+        <td><%= link_to 'Show', company_comply_advantage_pep_path(@company, comply_advantage_pep) %></td>
+        <td><%= link_to 'Edit', edit_company_comply_advantage_pep_path(@company, comply_advantage_pep) %></td>
+        <td><%= link_to 'Destroy', company_comply_advantage_pep_path(@company, comply_advantage_pep), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comply Advantage Pep', new_company_comply_advantage_pep_path(@company) %> |
+<%= link_to 'Back', companies_path %>
