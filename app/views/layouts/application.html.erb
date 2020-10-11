@@ -12,6 +12,11 @@
   <body>
     <ul>
       <li>
+          <% if params[:controller].eql? 'companies' %>
+            <%= image_tag('company.png', size: '120x100') %>
+          <% elsif params[:controller].eql?('comply_advantage_peps') || params[:controller].eql?('comply_advantage_news') %>
+            <%= image_tag('comply.png', size: '120x100') %>
+          <% end %>
           <%= link_to 'Home', root_url %> |
           <%= link_to 'Companies House', companies_path %> |
           <%= link_to 'Comply Advantage PEP', comply_advantage_peps_path %> |
