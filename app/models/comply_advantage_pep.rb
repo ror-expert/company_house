@@ -1,5 +1,3 @@
 class ComplyAdvantagePep < ApplicationRecord
-  belongs_to :company
-
-  validates_presence_of :person_name
+  validates_presence_of :person_name, :company_number
 end

@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <ul>
+      <li>
+          <%= link_to 'Home', root_url %> |
+          <%= link_to 'Companies House', companies_path %> |
+          <%= link_to 'Comply Advantage PEP', comply_advantage_peps_path %> |
+          <%= link_to 'Comply Advantage News', comply_advantage_news_index_path %>
+      </li>
+    </ul>
     <%= yield %>
   </body>
 </html>

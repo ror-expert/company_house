@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_10_10_051444) do
 
   create_table "companies", force: :cascade do |t|
+    t.integer "company_number"
     t.string "name"
     t.string "address_line_1"
     t.string "address_line_2"
@@ -23,22 +24,18 @@ ActiveRecord::Schema.define(version: 2020_10_10_051444) do
   end
 
   create_table "comply_advantage_news", force: :cascade do |t|
-    t.integer "company_id", null: false
+    t.integer "company_number"
     t.decimal "score"
     t.string "story"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["company_id"], name: "index_comply_advantage_news_on_company_id"
   end
 
   create_table "comply_advantage_peps", force: :cascade do |t|
-    t.integer "company_id", null: false
+    t.integer "company_number"
     t.string "person_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["company_id"], name: "index_comply_advantage_peps_on_company_id"
   end
 
-  add_foreign_key "comply_advantage_news", "companies"
-  add_foreign_key "comply_advantage_peps", "companies"
 end

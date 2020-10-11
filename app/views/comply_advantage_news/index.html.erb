@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Company</th>
+      <th>Company Number</th>
       <th>Score</th>
       <th>Story</th>
       <th colspan="3"></th>
@@ -15,12 +15,12 @@
   <tbody>
     <% @comply_advantage_news.each do |comply_advantage_news| %>
       <tr>
-        <td><%= comply_advantage_news.company.try(:name) %></td>
+        <td><%= comply_advantage_news.company_number %></td>
         <td><%= comply_advantage_news.score %></td>
         <td><%= comply_advantage_news.story %></td>
-        <td><%= link_to 'Show', company_comply_advantage_news_path(@company, comply_advantage_news) %></td>
-        <td><%= link_to 'Edit', edit_company_comply_advantage_news_path(@company, comply_advantage_news) %></td>
-        <td><%= link_to 'Destroy', company_comply_advantage_news_path(@company, comply_advantage_news), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', comply_advantage_news_path(comply_advantage_news) %></td>
+        <td><%= link_to 'Edit', edit_comply_advantage_news_path(comply_advantage_news) %></td>
+        <td><%= link_to 'Destroy', comply_advantage_news_path(comply_advantage_news), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,5 +28,4 @@
 
 <br>
 
-<%= link_to 'New Comply Advantage News', new_company_comply_advantage_news_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<%= link_to 'New Comply Advantage News', new_comply_advantage_news_path %>

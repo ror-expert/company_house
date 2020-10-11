@@ -1,4 +1,4 @@
-<%= form_with(model: comply_advantage_pep, url: url, remote: false) do |form| %>
+<%= form_with(model: comply_advantage_pep, local: true) do |form| %>
   <% if comply_advantage_pep.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(comply_advantage_pep.errors.count, "error") %> prohibited this comply_advantage_pep from being saved:</h2>
@@ -10,6 +10,11 @@
       </ul>
     </div>
   <% end %>
+
+  <div class="field">
+    <%= form.label :company_number %>
+    <%= form.number_field :company_number %>
+  </div>
 
   <div class="field">
     <%= form.label :person_name %>
