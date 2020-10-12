@@ -58,6 +58,8 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    apipie-rails (0.5.18)
+      rails (>= 4.1)
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
@@ -199,6 +201,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  apipie-rails
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)

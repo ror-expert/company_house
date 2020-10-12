@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  apipie
   resources :companies
   resources :comply_advantage_news
   resources :comply_advantage_peps
