@@ -5,6 +5,10 @@ class ComplyAdvantagePepsController < ApplicationController
   # GET /comply_advantage_peps.json
   def index
     @comply_advantage_peps = ComplyAdvantagePep.all
+    respond_to do |format|
+      format.html { }
+      format.json { render json: {comply_advantage_peps: @comply_advantage_peps} }
+    end
   end
 
   # GET /comply_advantage_peps/1
