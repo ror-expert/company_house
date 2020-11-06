@@ -73,6 +73,6 @@ class ComplyAdvantagePepsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comply_advantage_pep_params
-      params.require(:comply_advantage_pep).permit(:person_name, :company_number)
+      params.require(:comply_advantage_pep).permit(:id, :person_name, :company_number)
     end
 end

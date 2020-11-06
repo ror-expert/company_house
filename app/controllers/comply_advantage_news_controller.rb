@@ -73,6 +73,6 @@ class ComplyAdvantageNewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comply_advantage_news_params
-      params.require(:comply_advantage_news).permit(:score, :story, :company_number)
+      params.require(:comply_advantage_news).permit(:id, :score, :story, :company_number)
     end
 end
